@@ -21,6 +21,8 @@ import CourtsPage from "../pages/user/CourtsPage";
 import BookingPage from "../pages/user/BookingPage";
 import AboutPage from "../pages/user/AboutPage";
 import CourtDetailPage from "../pages/user/CourtDetailPage";
+import BookingSuccessPage from "../pages/user/BookingSuccessPage";
+import MyBookingsPage from "../pages/user/MyBookingsPage";
 
 /* Auth Pages */
 import LoginPage from "../pages/auth/LoginPage";
@@ -52,6 +54,16 @@ const router = createBrowserRouter([
       {
         path: "/booking",
         element: <BookingPage />,
+      },
+
+      {
+        path: "/booking-success",
+        element: <BookingSuccessPage />,
+      },
+
+      {
+        path: "/my-bookings",
+        element: <MyBookingsPage />,
       },
 
       {
