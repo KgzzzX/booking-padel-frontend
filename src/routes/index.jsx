@@ -109,6 +109,9 @@ const router = createBrowserRouter([
     path: "/admin/courts",
     element: <AdminCourtsPage />,
   },
+  { path: "/admin/bookings", 
+    element: <AdminBookingsPage /> 
+  },
 
 ]);
 
