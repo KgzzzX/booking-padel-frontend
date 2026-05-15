@@ -34,6 +34,7 @@ import AdminDashboardPage from "../pages/admin/AdminDashboardPage";
 import AdminCourtsPage from "../pages/admin/AdminCourtsPage";
 import AdminBookingsPage from "../pages/admin/AdminBookingsPage";
 import AdminUsersPage from "../pages/admin/AdminUsersPage";
+import AdminSchedulesPage from "../pages/admin/AdminSchedulesPage";
 
 /* =========================
    Router Configuration
@@ -116,6 +117,10 @@ const router = createBrowserRouter([
   },
   { path: "/admin/users", 
     element: <AdminUsersPage /> 
+  },
+  { path: "/admin/schedules", 
+    element: <AdminSchedulesPage /> 
+    
   },
 
 ]);
