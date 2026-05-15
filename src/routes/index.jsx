@@ -1,41 +1,80 @@
-// Import routing React
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+/* =========================
+   React Router
+========================= */
 
-// Import layout
+import {
+  createBrowserRouter,
+} from "react-router-dom";
+
+/* =========================
+   Layouts
+========================= */
 import MainLayout from "../layouts/MainLayout";
 
-// Import pages
+/* =========================
+   Pages
+========================= */
+
+/* User Pages */
 import HomePage from "../pages/user/HomePage";
-import LoginPage from "../pages/auth/LoginPage";
 import CourtsPage from "../pages/user/CourtsPage";
 import BookingPage from "../pages/user/BookingPage";
 import AboutPage from "../pages/user/AboutPage";
 
+/* Auth Pages */
+import LoginPage from "../pages/auth/LoginPage";
+import RegisterPage from "../pages/auth/RegisterPage";
+
 /* =========================
-   AppRoutes
+   Router Configuration
 ========================= */
-function AppRoutes() {
-  return (
-    <BrowserRouter>
+const router = createBrowserRouter([
 
-        <Routes>
-            <Route element={<MainLayout />}>
+  /*
+    USER ROUTES
+    menggunakan MainLayout
+  */
+  {
+    element: <MainLayout />,
+    children: [
 
-            <Route path="/" element={<HomePage />} />
+      {
+        path: "/",
+        element: <HomePage />,
+      },
 
-            <Route path="/login" element={<LoginPage />} />
+      {
+        path: "/courts",
+        element: <CourtsPage />,
+      },
 
-            <Route path="/courts" element={<CourtsPage />} />
+      {
+        path: "/booking",
+        element: <BookingPage />,
+      },
 
-            <Route path="/booking" element={<BookingPage />} />
+      {
+        path: "/about",
+        element: <AboutPage />,
+      },
 
-            <Route path="/about" element={<AboutPage />} />
+    ],
+  },
 
-            </Route>
-        </Routes>
+  /*
+    AUTH ROUTES
+    TANPA MainLayout
+  */
+  {
+    path: "/login",
+    element: <LoginPage />,
+  },
 
-    </BrowserRouter>
-  );
-}
+  {
+    path: "/register",
+    element: <RegisterPage />,
+  },
 
-export default AppRoutes;
+]);
+
+export default router;
