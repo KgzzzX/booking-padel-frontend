@@ -1,28 +1,34 @@
 // Import routing React
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
+// Import layout
+import MainLayout from "../layouts/MainLayout";
+
 // Import pages
 import HomePage from "../pages/user/HomePage";
 import LoginPage from "../pages/auth/LoginPage";
 
 /* =========================
    AppRoutes
-   Tempat semua routing website
 ========================= */
 function AppRoutes() {
   return (
-
-    // Pembungkus utama routing
     <BrowserRouter>
 
-      {/* Kumpulan semua route */}
       <Routes>
 
-        {/* Halaman Home */}
-        <Route path="/" element={<HomePage />} />
+        {/* =========================
+            User Layout
+        ========================= */}
+        <Route element={<MainLayout />}>
 
-        {/* Halaman Login */}
-        <Route path="/login" element={<LoginPage />} />
+          {/* Home Page */}
+          <Route path="/" element={<HomePage />} />
+
+          {/* Login Page */}
+          <Route path="/login" element={<LoginPage />} />
+
+        </Route>
 
       </Routes>
 
