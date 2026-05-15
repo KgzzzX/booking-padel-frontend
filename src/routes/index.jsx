@@ -23,6 +23,7 @@ import AboutPage from "../pages/user/AboutPage";
 import CourtDetailPage from "../pages/user/CourtDetailPage";
 import BookingSuccessPage from "../pages/user/BookingSuccessPage";
 import MyBookingsPage from "../pages/user/MyBookingsPage";
+import ProfilePage from "../pages/user/ProfilePage";
 
 /* Auth Pages */
 import LoginPage from "../pages/auth/LoginPage";
@@ -69,6 +70,11 @@ const router = createBrowserRouter([
       {
         path: "/about",
         element: <AboutPage />,
+      },
+
+      {
+        path: "/profile",
+        element: <ProfilePage />,
       },
 
       {
