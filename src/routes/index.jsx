@@ -29,6 +29,9 @@ import ProfilePage from "../pages/user/ProfilePage";
 import LoginPage from "../pages/auth/LoginPage";
 import RegisterPage from "../pages/auth/RegisterPage";
 
+/* Admin Pages */
+import AdminDashboardPage from "../pages/admin/AdminDashboardPage";
+
 /* =========================
    Router Configuration
 ========================= */
@@ -41,47 +44,38 @@ const router = createBrowserRouter([
   {
     element: <MainLayout />,
     children: [
-
       {
         path: "/",
         element: <HomePage />,
       },
-
       {
         path: "/courts",
         element: <CourtsPage />,
       },
-
       {
         path: "/booking",
         element: <BookingPage />,
       },
-
       {
         path: "/booking-success",
         element: <BookingSuccessPage />,
       },
-
       {
         path: "/my-bookings",
         element: <MyBookingsPage />,
       },
-
       {
         path: "/about",
         element: <AboutPage />,
       },
-
       {
         path: "/profile",
         element: <ProfilePage />,
       },
-
       {
         path: "/courts/:id",
         element: <CourtDetailPage />,
       },
-
     ],
   },
 
@@ -93,10 +87,22 @@ const router = createBrowserRouter([
     path: "/login",
     element: <LoginPage />,
   },
-
   {
     path: "/register",
     element: <RegisterPage />,
+  },
+
+  /*
+    ADMIN ROUTES
+    TANPA MainLayout
+  */
+  {
+    path: "/admin",
+    element: <AdminDashboardPage />, 
+  },
+  {
+    path: "/admin/dashboard",
+    element: <AdminDashboardPage />,
   },
 
 ]);
