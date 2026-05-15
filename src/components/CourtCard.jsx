@@ -67,7 +67,7 @@ function CourtCard({
 
           {/* Booking Button */}
           <Link
-            to="/booking"
+            to={`/courts/${name}`}
             className="
               bg-green-500
               hover:bg-green-600

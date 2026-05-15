@@ -20,6 +20,7 @@ import HomePage from "../pages/user/HomePage";
 import CourtsPage from "../pages/user/CourtsPage";
 import BookingPage from "../pages/user/BookingPage";
 import AboutPage from "../pages/user/AboutPage";
+import CourtDetailPage from "../pages/user/CourtDetailPage";
 
 /* Auth Pages */
 import LoginPage from "../pages/auth/LoginPage";
@@ -56,6 +57,11 @@ const router = createBrowserRouter([
       {
         path: "/about",
         element: <AboutPage />,
+      },
+
+      {
+        path: "/courts/:id",
+        element: <CourtDetailPage />,
       },
 
     ],
