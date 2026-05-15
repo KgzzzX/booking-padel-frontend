@@ -31,7 +31,9 @@ import RegisterPage from "../pages/auth/RegisterPage";
 
 /* Admin Pages */
 import AdminDashboardPage from "../pages/admin/AdminDashboardPage";
-import AdminCourtsPage from "../pages/admin/AdminCourtsPage"; // Tambahan Import
+import AdminCourtsPage from "../pages/admin/AdminCourtsPage";
+import AdminBookingsPage from "../pages/admin/AdminBookingsPage";
+import AdminUsersPage from "../pages/admin/AdminUsersPage";
 
 /* =========================
    Router Configuration
@@ -111,6 +113,9 @@ const router = createBrowserRouter([
   },
   { path: "/admin/bookings", 
     element: <AdminBookingsPage /> 
+  },
+  { path: "/admin/users", 
+    element: <AdminUsersPage /> 
   },
 
 ]);
