@@ -31,6 +31,7 @@ import RegisterPage from "../pages/auth/RegisterPage";
 
 /* Admin Pages */
 import AdminDashboardPage from "../pages/admin/AdminDashboardPage";
+import AdminCourtsPage from "../pages/admin/AdminCourtsPage"; // Tambahan Import
 
 /* =========================
    Router Configuration
@@ -103,6 +104,10 @@ const router = createBrowserRouter([
   {
     path: "/admin/dashboard",
     element: <AdminDashboardPage />,
+  },
+  {
+    path: "/admin/courts",
+    element: <AdminCourtsPage />,
   },
 
 ]);
